@@ -7,9 +7,8 @@ namespace Students_timetable
 
         static void Main(string[] args)
         {
-            Console.InputEncoding = Encoding.UTF8;
-            Console.OutputEncoding = Encoding.UTF8;
-            
+            Console.InputEncoding = Encoding.Unicode;
+            Console.OutputEncoding = Encoding.Unicode;
             ShowUI();
         }
 
@@ -22,109 +21,74 @@ namespace Students_timetable
                 Console.WriteLine("3. Вихід");
 
                 Console.Write("Введіть цифру для вибору дії: ");
-                int choice = int.Parse(Console.ReadLine());
-                if (choice == 3) 
-                { 
+                int choice = 0;
+                try
+                {
+                    choice = int.Parse(Console.ReadLine());
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                if (choice == 3)
+                {
                     break;
                 }
                 switch (choice)
                 {
                     case 1:
-                            Console.Write("Введіть ім'я студента: ");
-                            string name = "", surname = "", group = "";
-                            try
-                            {
-                                name = Console.ReadLine();
-                            }
-                            catch (Exception ex)
-                            {
-                                Console.WriteLine(ex.Message);
-                            }
-                            Console.Write("Введіть прізвище студента: ");
-                            try
-                            {
-                                surname = Console.ReadLine();
-                            }
-                            catch (Exception ex)
-                            {
-                                Console.WriteLine(ex.Message);
-                            }
-                            Console.Write("Введіть групу студента: ");
-                            try
-                            {
-                                group = Console.ReadLine();
-                            }
-                            catch (Exception ex)
-                            {
-                                Console.WriteLine(ex.Message);
-                            }
+                        Console.Write("Введіть ім'я студента: ");
+                        string name = "", surname = "", group = "";
+                        name = Console.ReadLine();
+                        Console.Write("Введіть прізвище студента: ");
+                        surname = Console.ReadLine();
+                        Console.Write("Введіть групу студента: ");
+                        group = Console.ReadLine();
                         return;
-                        case 2:
-                            Console.InputEncoding = Encoding.UTF8;
-                            Console.OutputEncoding = Encoding.UTF8;
-                            string _name = "", _surname = "", _group = "";
-                            Console.Write("Введіть ім'я студента: ");
-                            try
-                            {
-                                _name = Console.ReadLine();
-                            }
-                            catch (Exception ex)
-                            {
-                                Console.WriteLine(ex.Message);
-                            }
-                            Console.Write("Введіть прізвище студента: ");
-                            try
-                            {
-                                _surname = Console.ReadLine();
-                            }
-                            catch (Exception ex)
-                            {
-                                Console.WriteLine(ex.Message);
-                            }
-                            Console.Write("Введіть групу студента: ");
-                            try
-                            {
-                                _group = Console.ReadLine();
-                            }
-                            catch (Exception ex)
-                            {
-                                Console.WriteLine(ex.Message);
-                            }
-                            Student student = new Student(_name, _surname, _group);
-                            Console.WriteLine("1. Зберегти");
-                            Console.WriteLine("2. Вийти без збереження");
-                            choice = int.Parse(Console.ReadLine());
-                            if (choice == 1)
-                            {
-                                var desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
-                                var filePath = Path.Combine(desktopPath, "students.txt");
-                                string textToSave = "";
-                                textToSave = $"{_name} {_surname} {_group}";
-                                Console.WriteLine(textToSave);
-                                SaveAll(filePath, textToSave);
-                                Console.WriteLine("Збережено, натисніть \'Enter\'");
-                                Console.ReadLine();
-                                Console.Clear();
-                            break;
-                            }
-                            else if (choice == 2)
-                            {
-                                _name = ""; _surname = ""; _group = "";
-                                break;
-                            }
-                            else
-                            {
-                                Console.WriteLine("Ви ввели щось не так, натисніть \'Enter\'");
-                                Console.ReadLine();
-                                Console.Clear();
-                                break;
-                            }
-                        return;
-                        default:
-                        
-                            Console.WriteLine("Ви ввели щось не так, настисніть \'Enter\'");
+                    case 2:
+                        string _name = "", _surname = "", _group = "";
+                        Console.Write("Введіть ім'я студента: ");
+                        _name = Console.ReadLine();
+                        Console.Write("Введіть прізвище студента: ");
+                        _surname = Console.ReadLine();
+                        Console.Write("Введіть групу студента: ");
+                        _group = Console.ReadLine();
+                        Student student = new Student(_name, _surname, _group);
+                        Console.WriteLine("1. Зберегти");
+                        Console.WriteLine("2. Вийти без збереження");
+                        choice = int.Parse(Console.ReadLine());
+                        if (choice == 1)
+                        {
+                            var desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+                            var filePath = Path.Combine(desktopPath, "students.txt");
+                            string textToSave = "";
+                            textToSave = $"{_name} {_surname} {_group}";
+                            Console.WriteLine(textToSave);
+                            SaveAll(filePath, textToSave);
+                            Console.WriteLine("Збережено, натисніть \'Enter\'");
                             Console.ReadLine();
                             Console.Clear();
+                            break;
+                        }
+                        else if (choice == 2)
+                        {
+                            _name = ""; _surname = ""; _group = "";
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Ви ввели щось не так, натисніть \'Enter\'");
+                            Console.ReadLine();
+                            Console.Clear();
+                            break;
+                        }
+                    case 3:
+                        return;
+                    default:
+
+                        Console.WriteLine("Ви ввели щось не так, настисніть \'Enter\'");
+                        Console.ReadLine();
+                        Console.Clear();
                         return;
                 }
             }
@@ -134,10 +98,10 @@ namespace Students_timetable
             try
             {
                 if (!File.Exists(_path))
-                {   
-                    using (FileStream fs = File.Create(_path)){}
+                {
+                    using (FileStream fs = File.Create(_path)) { }
                 }
-                using (StreamWriter writer=new StreamWriter(_path, true, Encoding.UTF8))
+                using (StreamWriter writer = new StreamWriter(_path, true, Encoding.Unicode))
                 {
                     writer.WriteLine(_text);
                 }
@@ -149,7 +113,7 @@ namespace Students_timetable
         }
         private static void ShowTimetable()
         {
-            
+
         }
         private static void DayTimetableDo()
         {
@@ -173,7 +137,7 @@ namespace Students_timetable
                 return;
             }
         }
-       
+
         private static void AddDoublePeriod()
         {
             List<string> lessons = new List<string>();

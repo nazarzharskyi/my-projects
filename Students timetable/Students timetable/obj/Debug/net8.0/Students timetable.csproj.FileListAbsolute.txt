@@ -12,3 +12,18 @@ D:\hillel\Students timetable\Students timetable\obj\Debug\net8.0\refint\Students
 D:\hillel\Students timetable\Students timetable\obj\Debug\net8.0\Students timetable.pdb
 D:\hillel\Students timetable\Students timetable\obj\Debug\net8.0\Students timetable.genruntimeconfig.cache
 D:\hillel\Students timetable\Students timetable\obj\Debug\net8.0\ref\Students timetable.dll
+D:\repos my proj\my-projects\Students timetable\Students timetable\bin\Debug\net8.0\Students timetable.exe
+D:\repos my proj\my-projects\Students timetable\Students timetable\bin\Debug\net8.0\Students timetable.deps.json
+D:\repos my proj\my-projects\Students timetable\Students timetable\bin\Debug\net8.0\Students timetable.runtimeconfig.json
+D:\repos my proj\my-projects\Students timetable\Students timetable\bin\Debug\net8.0\Students timetable.dll
+D:\repos my proj\my-projects\Students timetable\Students timetable\bin\Debug\net8.0\Students timetable.pdb
+D:\repos my proj\my-projects\Students timetable\Students timetable\obj\Debug\net8.0\Students timetable.GeneratedMSBuildEditorConfig.editorconfig
+D:\repos my proj\my-projects\Students timetable\Students timetable\obj\Debug\net8.0\Students timetable.AssemblyInfoInputs.cache
+D:\repos my proj\my-projects\Students timetable\Students timetable\obj\Debug\net8.0\Students timetable.AssemblyInfo.cs
+D:\repos my proj\my-projects\Students timetable\Students timetable\obj\Debug\net8.0\Students timetable.csproj.CoreCompileInputs.cache
+D:\repos my proj\my-projects\Students timetable\Students timetable\obj\Debug\net8.0\Students timetable.sourcelink.json
+D:\repos my proj\my-projects\Students timetable\Students timetable\obj\Debug\net8.0\Students timetable.dll
+D:\repos my proj\my-projects\Students timetable\Students timetable\obj\Debug\net8.0\refint\Students timetable.dll
+D:\repos my proj\my-projects\Students timetable\Students timetable\obj\Debug\net8.0\Students timetable.pdb
+D:\repos my proj\my-projects\Students timetable\Students timetable\obj\Debug\net8.0\Students timetable.genruntimeconfig.cache
+D:\repos my proj\my-projects\Students timetable\Students timetable\obj\Debug\net8.0\ref\Students timetable.dll

@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Students_timetable
-build_property.ProjectDir = D:\hillel\Students timetable\Students timetable\
+build_property.ProjectDir = D:\repos my proj\my-projects\Students timetable\Students timetable\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
