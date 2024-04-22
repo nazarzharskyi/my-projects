@@ -14,6 +14,7 @@ namespace Students_timetable
         public string Group { get; set; }
         public Student(string firstName, string lastName, string group)
         {
+            Id= Guid.NewGuid();
             Name = firstName;
             Surname = lastName;
             Group = group;

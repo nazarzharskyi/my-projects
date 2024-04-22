@@ -27,3 +27,18 @@ D:\repos my proj\my-projects\Students timetable\Students timetable\obj\Debug\net
 D:\repos my proj\my-projects\Students timetable\Students timetable\obj\Debug\net8.0\Students timetable.pdb
 D:\repos my proj\my-projects\Students timetable\Students timetable\obj\Debug\net8.0\Students timetable.genruntimeconfig.cache
 D:\repos my proj\my-projects\Students timetable\Students timetable\obj\Debug\net8.0\ref\Students timetable.dll
+C:\proj\my-projects\Students timetable\Students timetable\bin\Debug\net8.0\Students timetable.exe
+C:\proj\my-projects\Students timetable\Students timetable\bin\Debug\net8.0\Students timetable.deps.json
+C:\proj\my-projects\Students timetable\Students timetable\bin\Debug\net8.0\Students timetable.runtimeconfig.json
+C:\proj\my-projects\Students timetable\Students timetable\bin\Debug\net8.0\Students timetable.dll
+C:\proj\my-projects\Students timetable\Students timetable\bin\Debug\net8.0\Students timetable.pdb
+C:\proj\my-projects\Students timetable\Students timetable\obj\Debug\net8.0\Students timetable.GeneratedMSBuildEditorConfig.editorconfig
+C:\proj\my-projects\Students timetable\Students timetable\obj\Debug\net8.0\Students timetable.AssemblyInfoInputs.cache
+C:\proj\my-projects\Students timetable\Students timetable\obj\Debug\net8.0\Students timetable.AssemblyInfo.cs
+C:\proj\my-projects\Students timetable\Students timetable\obj\Debug\net8.0\Students timetable.csproj.CoreCompileInputs.cache
+C:\proj\my-projects\Students timetable\Students timetable\obj\Debug\net8.0\Students timetable.sourcelink.json
+C:\proj\my-projects\Students timetable\Students timetable\obj\Debug\net8.0\Students timetable.dll
+C:\proj\my-projects\Students timetable\Students timetable\obj\Debug\net8.0\refint\Students timetable.dll
+C:\proj\my-projects\Students timetable\Students timetable\obj\Debug\net8.0\Students timetable.pdb
+C:\proj\my-projects\Students timetable\Students timetable\obj\Debug\net8.0\Students timetable.genruntimeconfig.cache
+C:\proj\my-projects\Students timetable\Students timetable\obj\Debug\net8.0\ref\Students timetable.dll

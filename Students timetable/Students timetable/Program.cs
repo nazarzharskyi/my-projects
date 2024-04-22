@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using System.Text.RegularExpressions;
 namespace Students_timetable
 {
     internal class Program
@@ -44,7 +45,27 @@ namespace Students_timetable
                         surname = Console.ReadLine();
                         Console.Write("Введіть групу студента: ");
                         group = Console.ReadLine();
-                        return;
+                        var desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+                        var filePath = Path.Combine(desktopPath, "students.txt");
+                        if (File.Exists(filePath))
+                        {
+                            string textFromFile = ReadFile(filePath);
+                            bool TrueFalse= FindStudent(name, surname, group, textFromFile);
+                            Console.WriteLine(TrueFalse);
+                            Console.WriteLine("Натисніть \'Enter\'");
+                            Console.ReadLine();
+                            Console.Clear();
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("You don`t have a database of students");
+                            Console.WriteLine("Натисніть \'Enter\'");
+                            Console.ReadLine();
+                            Console.Clear();
+                            break;
+                        }
+                            break;
                     case 2:
                         string _name = "", _surname = "", _group = "";
                         Console.Write("Введіть ім'я студента: ");
@@ -59,10 +80,11 @@ namespace Students_timetable
                         choice = int.Parse(Console.ReadLine());
                         if (choice == 1)
                         {
-                            var desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
-                            var filePath = Path.Combine(desktopPath, "students.txt");
+                            desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+                            filePath = Path.Combine(desktopPath, "students.txt");
                             string textToSave = "";
-                            textToSave = $"{_name} {_surname} {_group}";
+                            //textToSave = $"{_name} {_surname} {_group}";
+                            textToSave=$"{student.Id} {student.Name} {student.Surname} {student.Group}";
                             Console.WriteLine(textToSave);
                             SaveAll(filePath, textToSave);
                             Console.WriteLine("Збережено, натисніть \'Enter\'");
@@ -179,6 +201,19 @@ namespace Students_timetable
                 Console.Clear();
             }
 
+        }
+        static string ReadFile(string path)
+        {
+            using (StreamReader reader = new StreamReader(path))
+            {
+                return reader.ReadToEnd();
+            }
+        }
+        static bool FindStudent(string name, string surname, string group, string text)
+        {
+            string Find = $"{name} {surname} {group}";
+            Match match = Regex.Match(text, Find);
+            return match.Success;
         }
         private static void DeleteDoublepriod()
         {
