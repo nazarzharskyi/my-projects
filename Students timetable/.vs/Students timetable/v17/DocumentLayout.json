@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\proj\\my-projects\\Students timetable\\",
+  "WorkspaceRootPath": "D:\\repos my proj\\my-projects\\Students timetable\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{47BF6087-09F8-4F4C-975C-14D1D880F895}|Students timetable\\Students timetable.csproj|c:\\proj\\my-projects\\students timetable\\students timetable\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{47BF6087-09F8-4F4C-975C-14D1D880F895}|Students timetable\\Students timetable.csproj|d:\\repos my proj\\my-projects\\students timetable\\students timetable\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{47BF6087-09F8-4F4C-975C-14D1D880F895}|Students timetable\\Students timetable.csproj|solutionrelative:students timetable\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47BF6087-09F8-4F4C-975C-14D1D880F895}|Students timetable\\Students timetable.csproj|c:\\proj\\my-projects\\students timetable\\students timetable\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47BF6087-09F8-4F4C-975C-14D1D880F895}|Students timetable\\Students timetable.csproj|solutionrelative:students timetable\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{47BF6087-09F8-4F4C-975C-14D1D880F895}|Students timetable\\Students timetable.csproj|d:\\repos my proj\\my-projects\\students timetable\\students timetable\\doubleperiods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47BF6087-09F8-4F4C-975C-14D1D880F895}|Students timetable\\Students timetable.csproj|solutionrelative:students timetable\\doubleperiods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47BF6087-09F8-4F4C-975C-14D1D880F895}|Students timetable\\Students timetable.csproj|c:\\proj\\my-projects\\students timetable\\students timetable\\doubleperiods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47BF6087-09F8-4F4C-975C-14D1D880F895}|Students timetable\\Students timetable.csproj|solutionrelative:students timetable\\doubleperiods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{47BF6087-09F8-4F4C-975C-14D1D880F895}|Students timetable\\Students timetable.csproj|d:\\repos my proj\\my-projects\\students timetable\\students timetable\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47BF6087-09F8-4F4C-975C-14D1D880F895}|Students timetable\\Students timetable.csproj|solutionrelative:students timetable\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,30 +22,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Student.cs",
-              "DocumentMoniker": "C:\\proj\\my-projects\\Students timetable\\Students timetable\\Student.cs",
-              "RelativeDocumentMoniker": "Students timetable\\Student.cs",
-              "ToolTip": "C:\\proj\\my-projects\\Students timetable\\Students timetable\\Student.cs",
-              "RelativeToolTip": "Students timetable\\Student.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAAAoAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T11:48:23.248Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Student.cs",
+              "DocumentMoniker": "D:\\repos my proj\\my-projects\\Students timetable\\Students timetable\\Student.cs",
+              "RelativeDocumentMoniker": "Students timetable\\Student.cs",
+              "ToolTip": "D:\\repos my proj\\my-projects\\Students timetable\\Students timetable\\Student.cs",
+              "RelativeToolTip": "Students timetable\\Student.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAAAoAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T11:48:23.248Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "DoublePeriods.cs",
-              "DocumentMoniker": "C:\\proj\\my-projects\\Students timetable\\Students timetable\\DoublePeriods.cs",
+              "DocumentMoniker": "D:\\repos my proj\\my-projects\\Students timetable\\Students timetable\\DoublePeriods.cs",
               "RelativeDocumentMoniker": "Students timetable\\DoublePeriods.cs",
-              "ToolTip": "C:\\proj\\my-projects\\Students timetable\\Students timetable\\DoublePeriods.cs",
+              "ToolTip": "D:\\repos my proj\\my-projects\\Students timetable\\Students timetable\\DoublePeriods.cs",
               "RelativeToolTip": "Students timetable\\DoublePeriods.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAjAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-13T11:32:58.945Z"
             },
@@ -53,11 +56,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\proj\\my-projects\\Students timetable\\Students timetable\\Program.cs",
+              "DocumentMoniker": "D:\\repos my proj\\my-projects\\Students timetable\\Students timetable\\Program.cs",
               "RelativeDocumentMoniker": "Students timetable\\Program.cs",
-              "ToolTip": "C:\\proj\\my-projects\\Students timetable\\Students timetable\\Program.cs",
+              "ToolTip": "D:\\repos my proj\\my-projects\\Students timetable\\Students timetable\\Program.cs",
               "RelativeToolTip": "Students timetable\\Program.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAkwDsAAAAcAAAA",
+              "ViewState": "AQIAAEECAAAAAAAAAAAAAA0AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-13T11:31:21.733Z",
               "EditorCaption": ""

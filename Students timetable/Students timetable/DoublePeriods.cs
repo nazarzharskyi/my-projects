@@ -9,10 +9,15 @@ namespace Students_timetable
     internal class DoublePeriods
     {
         public Guid Id { get; set; } // Unique identify
-        public string Name { get; set; }
-        public string Category { get; set; }
-        public decimal Price { get; set; }
-        public int Quantity { get; set; }
-
+        public string Day { get; set; }
+        public string Time { get; set; }
+        public string Lesson { get; set; }
+        public DoublePeriods(string day, string time, string lesson) 
+        {
+            Id= Guid.NewGuid();
+            Day= day;
+            Time= time;
+            Lesson= lesson;
+        }
     }
 }

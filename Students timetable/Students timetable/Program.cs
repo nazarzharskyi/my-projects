@@ -51,15 +51,39 @@ namespace Students_timetable
                         {
                             string textFromFile = ReadFile(filePath);
                             bool TrueFalse= FindStudent(name, surname, group, textFromFile);
-                            Console.WriteLine(TrueFalse);
-                            Console.WriteLine("Натисніть \'Enter\'");
-                            Console.ReadLine();
-                            Console.Clear();
+                            if (TrueFalse)
+                            {
+                                Console.WriteLine("1. Продивитись розклад");
+                                Console.WriteLine("2. Редагувати розклад");
+                                Console.WriteLine("3. Вихід");
+                                choice = 0;
+                                try
+                                {
+                                    choice = Convert.ToInt32(Console.ReadLine());
+                                }
+                                catch(Exception e)
+                                {
+                                    Console.WriteLine(e.Message);
+                                }
+                                switch (choice)
+                                {
+                                    case 1:
+                                        ShowTimetable();
+                                        break;
+                                }
+                            }
+                            else
+                            {
+                                Console.WriteLine("Студента не знайдено");
+                                Console.WriteLine("Натисніть \'Enter\'");
+                                Console.ReadLine();
+                                Console.Clear();
+                            }
                             break;
                         }
                         else
                         {
-                            Console.WriteLine("You don`t have a database of students");
+                            Console.WriteLine("Бази данних не існує");
                             Console.WriteLine("Натисніть \'Enter\'");
                             Console.ReadLine();
                             Console.Clear();
@@ -165,40 +189,302 @@ namespace Students_timetable
             List<string> lessons = new List<string>();
             List<string> lesson = new List<string>();
             lessons = ["Лінійна алгебра", "Програмування", "Фізична культура", "Математичний аналіз", "Алгоритмічні мови"];
-            Console.WriteLine("1. Оберіть предмет");
-            Console.WriteLine("2. Вихід");
-            int choice = int.Parse(Console.ReadLine());
-            if (choice == 1)
+            while (true)
             {
-                for (int i = 0; i < lessons.Count; i++)
+                Console.WriteLine("1. Обрати день тижня");
+                Console.WriteLine("2. Вихід");
+                int choice = 0;
+                string day = "", time = "", lesson_ = "";
+                DoublePeriods doublePer = new DoublePeriods(day, time, lesson_);
+                try
                 {
-                    Console.WriteLine($"{i + 1}. {lessons[i]}");
+                    choice = Convert.ToInt32(Console.ReadLine());
                 }
-                Console.WriteLine();
-                choice = int.Parse(Console.ReadLine());
-                if (choice > 0 && choice < 6)
+                catch (Exception e)
                 {
+                    Console.WriteLine(e.Message);
+                }
+                if (choice == 1)
+                {
+                    Console.WriteLine("1. Понеділок\n2. Вівторок\n3. Середа\n4. Четвер\n5. П'ятниця\n6. Субота");
+                    Console.Write("Введіть цифру для обрання дня: ");
+                    choice = 0;
+                    try
                     {
+                        choice = Convert.ToInt32(Console.ReadLine());
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e.Message);
+                    }
+                    switch (choice)
+                    {
+                        case 1:
+                            day = "Понеділок";
+                            Console.WriteLine("1. 8:30\n2. 10:30\n3. 12:30\n4. 14:30\n5. 16:25\n6. 17:15");
+                            Console.Write("Введіть цифру для обрання часу: ");
+                            choice = 0;
+                            try
+                            {
+                                choice = Convert.ToInt32(Console.ReadLine());
+                            }
+                            catch (Exception e)
+                            {
+                                Console.WriteLine(e.Message);
+                            }
+                            switch (choice)
+                            {
+                                case 1:
+                                    time = "8:30 ";
+                                    choice = 0;
+                                    for (int i = 0; i < lessons.Count; i++)
+                                    {
+                                        Console.WriteLine($"{i + 1}. {lessons[i]}");
+                                    }
+                                    Console.WriteLine("Введіть цифру для додання предмету:");
+                                    try
+                                    {
+                                        choice = Convert.ToInt32(Console.ReadLine());
+                                    }
+                                    catch (Exception e)
+                                    {
+                                        Console.WriteLine(e.Message);
+                                    }
+                                    switch (choice)
+                                    {
+                                        case 1:
+                                            lesson_ = lesson[0];
+                                            break;
+                                        case 2:
+                                            lesson_ = lesson[1];
+                                            break;
+                                        case 3:
+                                            lesson_ = lesson[2];
+                                            break;
+                                        case 4:
+                                            lesson_ = lesson[3];
+                                            break;
+                                        case 5:
+                                            lesson_ = lesson[4];
+                                            break;
+                                        default:
+                                            Console.WriteLine("Ви ввели щось не так, спробуйте ще раз");
+                                            break;
+                                    }
+                                    break;
+                                case 2:
+                                    time = "10:30 ";
+                                    choice = 0;
+                                    for (int i = 0; i < lessons.Count; i++)
+                                    {
+                                        Console.WriteLine($"{i + 1}. {lessons[i]}");
+                                    }
+                                    Console.WriteLine("Введіть цифру для додання предмету:");
+                                    try
+                                    {
+                                        choice = Convert.ToInt32(Console.ReadLine());
+                                    }
+                                    catch (Exception e)
+                                    {
+                                        Console.WriteLine(e.Message);
+                                    }
+                                    switch (choice)
+                                    {
+                                        case 1:
+                                            lesson_ = lesson[0];
+                                            break;
+                                        case 2:
+                                            lesson_ = lesson[1];
+                                            break;
+                                        case 3:
+                                            lesson_ = lesson[2];
+                                            break;
+                                        case 4:
+                                            lesson_ = lesson[3];
+                                            break;
+                                        case 5:
+                                            lesson_ = lesson[4];
+                                            break;
+                                        default:
+                                            Console.WriteLine("Ви ввели щось не так, спробуйте ще раз");
+                                            break;
+                                    }
+                                    break;
+                                case 3:
+                                    time = "12:30 ";
+                                    choice = 0;
+                                    for (int i = 0; i < lessons.Count; i++)
+                                    {
+                                        Console.WriteLine($"{i + 1}. {lessons[i]}");
+                                    }
+                                    Console.WriteLine("Введіть цифру для додання предмету:");
+                                    try
+                                    {
+                                        choice = Convert.ToInt32(Console.ReadLine());
+                                    }
+                                    catch (Exception e)
+                                    {
+                                        Console.WriteLine(e.Message);
+                                    }
+                                    switch (choice)
+                                    {
+                                        case 1:
+                                            lesson_ = lesson[0];
+                                            break;
+                                        case 2:
+                                            lesson_ = lesson[1];
+                                            break;
+                                        case 3:
+                                            lesson_ = lesson[2];
+                                            break;
+                                        case 4:
+                                            lesson_ = lesson[3];
+                                            break;
+                                        case 5:
+                                            lesson_ = lesson[4];
+                                            break;
+                                        default:
+                                            Console.WriteLine("Ви ввели щось не так, спробуйте ще раз");
+                                            break;
+                                    }
+                                    break;
+                                case 4:
+                                    time = "14:30 ";
+                                    choice = 0;
+                                    for (int i = 0; i < lessons.Count; i++)
+                                    {
+                                        Console.WriteLine($"{i + 1}. {lessons[i]}");
+                                    }
+                                    Console.WriteLine("Введіть цифру для додання предмету:");
+                                    try
+                                    {
+                                        choice = Convert.ToInt32(Console.ReadLine());
+                                    }
+                                    catch (Exception e)
+                                    {
+                                        Console.WriteLine(e.Message);
+                                    }
+                                    switch (choice)
+                                    {
+                                        case 1:
+                                            lesson_ = lesson[0];
+                                            break;
+                                        case 2:
+                                            lesson_ = lesson[1];
+                                            break;
+                                        case 3:
+                                            lesson_ = lesson[2];
+                                            break;
+                                        case 4:
+                                            lesson_ = lesson[3];
+                                            break;
+                                        case 5:
+                                            lesson_ = lesson[4];
+                                            break;
+                                        default:
+                                            Console.WriteLine("Ви ввели щось не так, спробуйте ще раз");
+                                            break;
+                                    }
+                                    break;
+                                case 5:
+                                    time = "16:25 ";
+                                    choice = 0;
+                                    for (int i = 0; i < lessons.Count; i++)
+                                    {
+                                        Console.WriteLine($"{i + 1}. {lessons[i]}");
+                                    }
+                                    Console.WriteLine("Введіть цифру для додання предмету:");
+                                    try
+                                    {
+                                        choice = Convert.ToInt32(Console.ReadLine());
+                                    }
+                                    catch (Exception e)
+                                    {
+                                        Console.WriteLine(e.Message);
+                                    }
+                                    switch (choice)
+                                    {
+                                        case 1:
+                                            lesson_ = lesson[0];
+                                            break;
+                                        case 2:
+                                            lesson_ = lesson[1];
+                                            break;
+                                        case 3:
+                                            lesson_ = lesson[2];
+                                            break;
+                                        case 4:
+                                            lesson_ = lesson[3];
+                                            break;
+                                        case 5:
+                                            lesson_ = lesson[4];
+                                            break;
+                                        default:
+                                            Console.WriteLine("Ви ввели щось не так, спробуйте ще раз");
+                                            break;
+                                    }
+                                    break;
+                                case 6:
+                                    time = "17:15 ";
+                                    choice = 0;
+                                    for (int i = 0; i < lessons.Count; i++)
+                                    {
+                                        Console.WriteLine($"{i + 1}. {lessons[i]}");
+                                    }
+                                    Console.WriteLine("Введіть цифру для додання предмету:");
+                                    try
+                                    {
+                                        choice = Convert.ToInt32(Console.ReadLine());
+                                    }
+                                    catch (Exception e)
+                                    {
+                                        Console.WriteLine(e.Message);
+                                    }
+                                    switch (choice)
+                                    {
+                                        case 1:
+                                            lesson_ = lesson[0];
+                                            break;
+                                        case 2:
+                                            lesson_ = lesson[1];
+                                            break;
+                                        case 3:
+                                            lesson_ = lesson[2];
+                                            break;
+                                        case 4:
+                                            lesson_ = lesson[3];
+                                            break;
+                                        case 5:
+                                            lesson_ = lesson[4];
+                                            break;
+                                        default:
+                                            Console.WriteLine("Ви ввели щось не так, спробуйте ще раз");
+                                            break;
+                                    }
+                                    break;
+                                default:
+                                    Console.WriteLine("Ви ввели щось не так, спробуйте ще раз");
+                                    break;
 
+                            }
+                            break;
+                        default:
+                            Console.WriteLine("Ви ввели щось не так, спробуйте ще раз");
+                            break;
                     }
-                    for (int i = 0; i < lessons.Count; i++)
-                    {
-                        if (choice == i - 1)
-                        {
-                            lesson.Add(lessons[i]);
-                        }
-                    }
+
                 }
-            }
-            else if (choice == 2)
-            {
-                Console.Clear();
-            }
-            else
-            {
-                Console.WriteLine("Ви ввели щось не так, натисніть \'Enter\'");
-                Console.ReadLine();
-                Console.Clear();
+                else if (choice == 2)
+                {
+                    return;
+                }
+                else
+                {
+                    Console.WriteLine("Ви ввели щось не так, спробуйте ще раз");
+                    Console.WriteLine("Натисніть \'Enter\'");
+                    Console.ReadLine();
+                    Console.Clear();
+                }
             }
 
         }
@@ -207,6 +493,265 @@ namespace Students_timetable
             using (StreamReader reader = new StreamReader(path))
             {
                 return reader.ReadToEnd();
+            }
+        }
+
+        static void TimeAndLesson(string day_)
+        {
+            List<string> lessons = new List<string>();
+            List<string> lesson = new List<string>();
+            lessons = ["Лінійна алгебра", "Програмування", "Фізична культура", "Математичний аналіз", "Алгоритмічні мови"];
+            int choice = 0;
+            string day = "", time = "", lesson_ = "";
+            for (int j = 0; j < 1; j++)
+            {
+                
+                Console.WriteLine("1. 8:30\n2. 10:30\n3. 12:30\n4. 14:30\n5. 16:25\n6. 17:15");
+                Console.Write("Введіть цифру для обрання часу: ");
+                choice = 0;
+                try
+                {
+                    choice = Convert.ToInt32(Console.ReadLine());
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+                switch (choice)
+                {
+                    case 1:
+                        time = "8:30 ";
+                        choice = 0;
+                        for (int i = 0; i < lessons.Count; i++)
+                        {
+                            Console.WriteLine($"{i + 1}. {lessons[i]}");
+                        }
+                        Console.WriteLine("Введіть цифру для додання предмету:");
+                        try
+                        {
+                            choice = Convert.ToInt32(Console.ReadLine());
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+                        switch (choice)
+                        {
+                            case 1:
+                                lesson_ = lesson[0];
+                                break;
+                            case 2:
+                                lesson_ = lesson[1];
+                                break;
+                            case 3:
+                                lesson_ = lesson[2];
+                                break;
+                            case 4:
+                                lesson_ = lesson[3];
+                                break;
+                            case 5:
+                                lesson_ = lesson[4];
+                                break;
+                            default:
+                                Console.WriteLine("Ви ввели щось не так, спробуйте ще раз");
+                                break;
+                        }
+                        break;
+                    case 2:
+                        time = "10:30 ";
+                        choice = 0;
+                        for (int i = 0; i < lessons.Count; i++)
+                        {
+                            Console.WriteLine($"{i + 1}. {lessons[i]}");
+                        }
+                        Console.WriteLine("Введіть цифру для додання предмету:");
+                        try
+                        {
+                            choice = Convert.ToInt32(Console.ReadLine());
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+                        switch (choice)
+                        {
+                            case 1:
+                                lesson_ = lesson[0];
+                                break;
+                            case 2:
+                                lesson_ = lesson[1];
+                                break;
+                            case 3:
+                                lesson_ = lesson[2];
+                                break;
+                            case 4:
+                                lesson_ = lesson[3];
+                                break;
+                            case 5:
+                                lesson_ = lesson[4];
+                                break;
+                            default:
+                                Console.WriteLine("Ви ввели щось не так, спробуйте ще раз");
+                                break;
+                        }
+                        break;
+                    case 3:
+                        time = "12:30 ";
+                        choice = 0;
+                        for (int i = 0; i < lessons.Count; i++)
+                        {
+                            Console.WriteLine($"{i + 1}. {lessons[i]}");
+                        }
+                        Console.WriteLine("Введіть цифру для додання предмету:");
+                        try
+                        {
+                            choice = Convert.ToInt32(Console.ReadLine());
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+                        switch (choice)
+                        {
+                            case 1:
+                                lesson_ = lesson[0];
+                                break;
+                            case 2:
+                                lesson_ = lesson[1];
+                                break;
+                            case 3:
+                                lesson_ = lesson[2];
+                                break;
+                            case 4:
+                                lesson_ = lesson[3];
+                                break;
+                            case 5:
+                                lesson_ = lesson[4];
+                                break;
+                            default:
+                                Console.WriteLine("Ви ввели щось не так, спробуйте ще раз");
+                                break;
+                        }
+                        break;
+                    case 4:
+                        time = "14:30 ";
+                        choice = 0;
+                        for (int i = 0; i < lessons.Count; i++)
+                        {
+                            Console.WriteLine($"{i + 1}. {lessons[i]}");
+                        }
+                        Console.WriteLine("Введіть цифру для додання предмету:");
+                        try
+                        {
+                            choice = Convert.ToInt32(Console.ReadLine());
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+                        switch (choice)
+                        {
+                            case 1:
+                                lesson_ = lesson[0];
+                                break;
+                            case 2:
+                                lesson_ = lesson[1];
+                                break;
+                            case 3:
+                                lesson_ = lesson[2];
+                                break;
+                            case 4:
+                                lesson_ = lesson[3];
+                                break;
+                            case 5:
+                                lesson_ = lesson[4];
+                                break;
+                            default:
+                                Console.WriteLine("Ви ввели щось не так, спробуйте ще раз");
+                                break;
+                        }
+                        break;
+                    case 5:
+                        time = "16:25 ";
+                        choice = 0;
+                        for (int i = 0; i < lessons.Count; i++)
+                        {
+                            Console.WriteLine($"{i + 1}. {lessons[i]}");
+                        }
+                        Console.WriteLine("Введіть цифру для додання предмету:");
+                        try
+                        {
+                            choice = Convert.ToInt32(Console.ReadLine());
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+                        switch (choice)
+                        {
+                            case 1:
+                                lesson_ = lesson[0];
+                                break;
+                            case 2:
+                                lesson_ = lesson[1];
+                                break;
+                            case 3:
+                                lesson_ = lesson[2];
+                                break;
+                            case 4:
+                                lesson_ = lesson[3];
+                                break;
+                            case 5:
+                                lesson_ = lesson[4];
+                                break;
+                            default:
+                                Console.WriteLine("Ви ввели щось не так, спробуйте ще раз");
+                                break;
+                        }
+                        break;
+                    case 6:
+                        time = "17:15 ";
+                        choice = 0;
+                        for (int i = 0; i < lessons.Count; i++)
+                        {
+                            Console.WriteLine($"{i + 1}. {lessons[i]}");
+                        }
+                        Console.WriteLine("Введіть цифру для додання предмету:");
+                        try
+                        {
+                            choice = Convert.ToInt32(Console.ReadLine());
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+                        switch (choice)
+                        {
+                            case 1:
+                                lesson_ = lesson[0];
+                                break;
+                            case 2:
+                                lesson_ = lesson[1];
+                                break;
+                            case 3:
+                                lesson_ = lesson[2];
+                                break;
+                            case 4:
+                                lesson_ = lesson[3];
+                                break;
+                            case 5:
+                                lesson_ = lesson[4];
+                                break;
+                            default:
+                                Console.WriteLine("Ви ввели щось не так, спробуйте ще раз");
+                                break;
+                        }
+                        break;
+                    default:
+                        Console.WriteLine("Ви ввели щось не так, спробуйте ще раз");
+                        break;
+
+                }
             }
         }
         static bool FindStudent(string name, string surname, string group, string text)
