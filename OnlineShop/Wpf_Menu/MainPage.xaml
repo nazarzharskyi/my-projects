@@ -1,0 +1,49 @@
+﻿<Page x:Class="Wpf_Menu.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:local="clr-namespace:Wpf_Menu"
+      mc:Ignorable="d"
+      Title="MainPage" d:DesignHeight="400" d:DesignWidth="680">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Labels -->
+        <Label Content="Производители товаров" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="Поставщики товаров" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1"/>
+        <Label Content="Категории товаров" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="2"/>
+        <Label Content="Продукты" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="3"/>
+        <Label Content="Заказ продуктов" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="4"/>
+        <Label Content="Работники" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label Content="Покупатели" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1"/>
+        <Label Content="Дисконтные карты" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="2" Grid.Column="1"/>
+        <Label Content="Заказ покупателем" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="3" Grid.Column="1"/>
+        <Label Content="Складские запасы" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="4" Grid.Column="1"/>
+
+        <!-- Buttons -->
+        <Button x:Name="Suppliers" Margin="112,0,0,0" Content="Suppliers" Grid.Row="1" Click="Button_Click_Suppliers"/>
+        <Button x:Name="Manufacturer" Margin="112,0,0,0" Content="Manufacturers" Click="Button_Click_Manufacturer"/>
+        <Button x:Name="Category" Margin="112,0,0,0" Content="Category" Grid.Row="2" Click="Button_Click_Category"/>
+        <Button x:Name="Products" Margin="112,0,0,0" Content="Product" Grid.Row="3" Click="Button_Click_Products"/>
+        <Button x:Name="Orders" Margin="112,0,0,0" Content="Orders" Grid.Row="4" Click="Button_Click_Orders"/>
+        <Button x:Name="Employees" HorizontalAlignment="Center" Content="Employees" Grid.Column="1" Click="Button_Click_Employees"/>
+        <Button x:Name="Buyers" HorizontalAlignment="Center" Content="Buyers" Grid.Row="1" Grid.Column="1" Click="Button_Click_Buyers"/>
+        <Button x:Name="Cards" HorizontalAlignment="Center" Content="Cards" Grid.Row="2" Grid.Column="1" Click="Button_Click_Cards"/>
+        <Button x:Name="Payment" HorizontalAlignment="Center" Content="Payment" Grid.Row="3" Grid.Column="1" Click="Button_Click_Payment"/>
+        <Button x:Name="Stock" HorizontalAlignment="Center" Content="Stock" Grid.Row="4" Grid.Column="1" Click="Button_Click_Stock"/>
+
+        <!-- Frame for pages -->
+        <Frame Name="MainFrame" NavigationUIVisibility="Hidden" Grid.ColumnSpan="2" Grid.RowSpan="5" />
+    </Grid>
+</Page>
